@@ -1,7 +1,8 @@
 require "bundler/gem_tasks"
 
 LIB_FILES = FileList.new('lib/**/*.rb').
-  exclude('lib/chemistry-temperature/version.rb',
+  exclude('lib/chemistry-temperature.rb',
+          'lib/chemistry-temperature/version.rb',
           'lib/chemistry/temperature/errors.rb')
 TEST_FILES = LIB_FILES.pathmap('%{^lib,test}d/test_%f')
 
